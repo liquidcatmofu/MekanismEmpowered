@@ -398,7 +398,7 @@ val mainModDependencies = baseDependencies.toMutableList().apply {
     add(ModDep.optional("mekanismelements", "2.3".gte()))
     add(ModDep.optional("mekanism_extras", "1.5.0".gte()))
     add(ModDep.optional("mekmm", "1.2.1".gte()))
-    add(ModDep.optional("emextras", "1.4.1".gte()))
+    add(ModDep.optional("emextras", "1.5.0".gte()))
     add(ModDep.incompatible("mekanismtweaks"))
     add(ModDep.incompatible("mekanismupgradesreborn"))
 }

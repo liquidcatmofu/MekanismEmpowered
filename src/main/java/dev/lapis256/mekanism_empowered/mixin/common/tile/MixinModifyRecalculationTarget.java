@@ -45,11 +45,17 @@ class MixinModifyRecalculationTarget {
 
         },
         targets = {
-            "com.jerry.mekextras.common.tile.factory.TileEntityAdvancedFactory",
-            "com.jerry.mekextras.common.tile.factory.TileEntityItemStackChemicalToItemStackAdvancedFactory",
-            "com.jerry.mekextras.common.tile.machine.TileEntityAdvanceElectricPump",
+            "com.jerry.mekanism_extras.common.tile.factory.TileEntityExtraFactory",
+            "com.jerry.mekanism_extras.common.tile.factory.TileEntityExtraItemStackGasToItemStackFactory",
+            "com.jerry.mekanism_extras.common.tile.machine.TileEntityAdvancedElectricPump",
+            "com.jerry.mekanism_extras.common.integration.mekaf.tile.factory.base.TileEntityExtraAdvancedFactoryBase",
+            "com.jerry.mekanism_extras.common.integration.mekaf.tile.factory.TileEntityExtraDissolvingFactory",
+            "com.jerry.mekanism_extras.common.integration.mekaf.tile.factory.base.TileEntityExtraGasToGasFactory",
+            "com.jerry.mekanism_extras.common.integration.mekaf.tile.factory.base.TileEntityExtraSlurryToSlurryFactory",
+            "com.jerry.mekanism_extras.common.integration.mekmm.tile.TileEntityExtraMoreMachineFactory",
+            "com.jerry.mekanism_extras.common.integration.mekmm.tile.TileEntityExtraPlantingFactory",
 
-            "com.jerry.mekaf.common.tile.base.TileEntityAdvancedFactoryBase",
+            "com.jerry.mekaf.common.tile.factory.base.TileEntityAdvancedFactoryBase",
             "com.jerry.mekmm.common.tile.factory.TileEntityMoreMachineFactory",
             "com.jerry.meklm.common.tile.machine.TileEntityLargeChemicalInfuser",
             "com.jerry.meklm.common.tile.machine.TileEntityLargeElectrolyticSeparator",
@@ -58,6 +64,13 @@ class MixinModifyRecalculationTarget {
             "com.jerry.meklm.common.tile.machine.TileEntityLargeSolarNeutronActivator",
 
             "io.github.masyumero.emextras.common.tile.factory.TileEntityEMExtraFactory",
+            "io.github.masyumero.emextras.common.tile.factory.TileEntityItemStackGasToItemStackEMExtraFactory",
+            "io.github.masyumero.emextras.common.integration.mekaf.tile.factory.base.TileEntityEMExtraAdvancedFactoryBase",
+            "io.github.masyumero.emextras.common.integration.mekaf.tile.factory.TileEntityEMExtraDissolvingFactory",
+            "io.github.masyumero.emextras.common.integration.mekaf.tile.factory.base.TileEntityEMExtraGasToGasFactory",
+            "io.github.masyumero.emextras.common.integration.mekaf.tile.factory.base.TileEntityEMExtraSlurryToSlurryFactory",
+            "io.github.masyumero.emextras.common.integration.mekmm.tile.TileEntityEMExtraMoreMachineFactory",
+            "io.github.masyumero.emextras.common.integration.mekmm.tile.TileEntityEMExtraPlantingFactory",
 
             "com.fxd927.mekanismelements.common.tile.prefab.MSTileEntityProgressMachine"
         },

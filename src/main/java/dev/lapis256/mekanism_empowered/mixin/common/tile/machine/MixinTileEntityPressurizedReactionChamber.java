@@ -18,7 +18,9 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 @Mixin(
     value = TileEntityPressurizedReactionChamber.class,
     targets = {
-        "com.jerry.mekaf.common.tile.TileEntityPressurizedReactingFactory"
+        "com.jerry.mekaf.common.tile.factory.TileEntityPressurizedReactingFactory",
+        "com.jerry.mekanism_extras.common.integration.mekaf.tile.factory.TileEntityExtraPressurizedReactingFactory",
+        "io.github.masyumero.emextras.common.integration.mekaf.tile.factory.TileEntityEMExtraPressurizedReactingFactory"
     },
     remap = false
 )

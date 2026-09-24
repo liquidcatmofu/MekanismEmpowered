@@ -1,5 +1,7 @@
 package dev.lapis256.mekanism_empowered.integration.mods
 
+import com.jerry.mekanism_extras.common.integration.mekaf.registries.ExtraAdvancedFactoryBlockTypes
+import com.jerry.mekanism_extras.common.integration.mekmm.registries.ExtraMoreMachineBlockTypes
 import com.jerry.mekanism_extras.common.registries.ExtraBlockTypes
 import com.jerry.mekanism_extras.common.util.ExtraEnumUtils
 import dev.lapis256.mekanism_empowered.common.factory.FactoryBlockResolver
@@ -23,31 +25,31 @@ internal object MekExt : ModIntegration {
         )
     }
 
-//    private val extraAdvancedFactoryResolver by lazy {
-//        FactoryBlockResolver(
-//            name = "$modId:advanced",
-//            types = MekMM.advancedFactoryTypes,
-//            tiers = { ExtraEnumUtils.EXTRA_FACTORY_TIERS.asIterable() },
-//            resolver = { tier, type -> ExtraAdvancedFactoryBlockTypes.getExtraAdvancedFactory(tier, type) },
-//        )
-//    }
-//
-//    private val extraMoreMachineFactoryResolver by lazy {
-//        FactoryBlockResolver(
-//            name = "$modId:more_machine",
-//            types = MekMM.moreMachineFactoryTypes,
-//            tiers = { ExtraEnumUtils.EXTRA_FACTORY_TIERS.asIterable() },
-//            resolver = { tier, type -> ExtraMoreMachineBlockTypes.getExtraMoreMachineFactory(tier, type) },
-//        )
-//    }
+    private val extraAdvancedFactoryResolver by lazy {
+        FactoryBlockResolver(
+            name = "$modId:advanced",
+            types = MekMM.advancedFactoryTypes,
+            tiers = { ExtraEnumUtils.EXTRA_FACTORY_TIERS.asIterable() },
+            resolver = { tier, type -> ExtraAdvancedFactoryBlockTypes.getExtraAdvancedFactory(tier, type) },
+        )
+    }
+
+    private val extraMoreMachineFactoryResolver by lazy {
+        FactoryBlockResolver(
+            name = "$modId:more_machine",
+            types = MekMM.moreMachineFactoryTypes,
+            tiers = { ExtraEnumUtils.EXTRA_FACTORY_TIERS.asIterable() },
+            resolver = { tier, type -> ExtraMoreMachineBlockTypes.getExtraMoreMachineFactory(tier, type) },
+        )
+    }
 
     override fun initCommon(modEventBus: IEventBus) {
         FactoryBlockResolverRegistry.register(extraFactoryResolver)
 
-//        if (MekMM.isLoaded) {
-//            FactoryBlockResolverRegistry.register(extraAdvancedFactoryResolver)
-//            FactoryBlockResolverRegistry.register(extraMoreMachineFactoryResolver)
-//        }
+        if (MekMM.isLoaded) {
+            FactoryBlockResolverRegistry.register(extraAdvancedFactoryResolver)
+            FactoryBlockResolverRegistry.register(extraMoreMachineFactoryResolver)
+        }
 
         addDeferredSupported({ ExtraBlockTypes.ADVANCED_ELECTRIC_PUMP }, *SPEED_AND_ENERGY_UPGRADES)
     }

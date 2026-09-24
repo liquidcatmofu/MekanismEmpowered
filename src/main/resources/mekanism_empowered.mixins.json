@@ -12,6 +12,7 @@
     "common.MixinMachineEnergyContainer",
     "common.MixinMekanismUtils",
     "common.tile.AccessorTileEntityMekanism",
+    "common.tile.MixinAddonFactoryUpgradeRecalculation",
     "common.tile.MixinModifyRecalculationTarget$Energy",
     "common.tile.MixinModifyRecalculationTarget$Speed",
     "common.tile.MixinTileEntityAdvancedElectricPump",

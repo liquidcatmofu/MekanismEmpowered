@@ -20,7 +20,7 @@ igleelib = "6987117" # 1.2.7
 evolvedMekanism = "7161181" # 1.2.1
 mekanismElements = "6537553" # 2.3
 mekanismMoreMachines = "7884538" # 1.2.1
-evolvedMekanismExtras = "8294797" # 1.4.1-fix1
+evolvedMekanismExtras = "8468526" # 1.5.0
 
 
 [libraries]
